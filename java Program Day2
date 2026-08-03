@@ -1,0 +1,103 @@
+//-------conditions-----//
+class Main {
+    public static void main(String [] args) {
+        if (2 + 2 == 4) {
+        System.out.println("welcome");
+        System.out.println("update your details");
+        }
+        else
+        System.out.println("thank you");
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----even or odd----///
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+       
+        if(a%2==0)
+        System.out.println( a +"Even Number");
+        else
+        System.out.println( a +"odd Number");
+    }
+    
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------Eligible to vote--------//
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int age = obj.nextInt();
+        
+        if(age>=18)
+        System.out.println( age +" Eigible for vote" );
+        else
+        System.out.println( age +"Not Eligible for vote" ) ;
+    }
+    
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------2 AND 2 ARE EQUAL-------//
+
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+        int b = obj.nextInt();
+        if(a==b)
+        System.out.println( a +" AND " + b  + " ARE EQUAL ");
+        else
+        System.out.println( a +" AND " + b + " ARE NOT EQUAL ") ;
+    }
+    
+}
+//-------------3 divisible and remainder is 1-----------------//
+import java.util.*;
+public class Main {
+    public static void main(String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        if (num % 3 == 0) 
+            System.out.println(num + "is divisible by 3");
+        else 
+        System.out.println(num + "is not divisible by 3");
+        System.out.println("remainder is" +(num % 3));
+        
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//-----------greatest value---------//
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+        int b = obj.nextInt();
+        if(a>=b)
+        System.out.println( a +" is graterthan" + b );
+        else
+        System.out.println( a +"is Smallerthan " + b ) ;
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------time--------------//
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int h = obj.nextInt();
+		int m = obj.nextInt();
+		int s = obj.nextInt();
+		if (h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
+		    System.out.println("Valid");
+		else
+		System.out.println("Invalid");
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
