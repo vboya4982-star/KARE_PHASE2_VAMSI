@@ -1,3 +1,4 @@
+//-----count of the number digit
 import java.util.*;
  class Main {
     public static void main(String[] args) {
@@ -19,9 +20,9 @@ import java.util.*;
         sc.close();
     }
 }
+//-----------------------------------------------------------------------------------------------------
 
-
-// Palindrome
+// --------------------Palindrome
 
 import java.util.*;
 class Main {
@@ -45,6 +46,119 @@ class Main {
         } else {
             System.out.println(original + " is not a Palindrome.");
         }
+
+        sc.close();
+    }
+}
+//--------------------------------------------------------------------------------------------------------
+
+//-------------Prime digit count
+
+import java.util.Scanner;
+
+public class PrimeDigitCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+
+            if (digit == 2 || digit == 3 || digit == 5 || digit == 7) {
+                count++;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println("Number of prime digits: " + count);
+
+        sc.close();
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------------------
+
+//------------------count odd and even
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int oddCount = 0;
+        int evenCount = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+
+            if (digit % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println("Even digits count: " + evenCount);
+        System.out.println("Odd digits count: " + oddCount);
+
+        sc.close();
+    }
+}
+//-----------------------------------------------------------------------------------------------------------
+
+//------Reversed a number with using right side formation
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int reverse = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        System.out.println("Reversed Number: " + reverse);
+
+        sc.close();
+    }
+
+}
+//---------------------------------------------------------------------------------------------------
+
+//-----REVERSE NUMBER
+import java.util.*;
+
+ class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int reverse = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = num / 10;
+        }
+
+        System.out.println("Reversed Number: " + reverse);
 
         sc.close();
     }
