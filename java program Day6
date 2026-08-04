@@ -1,0 +1,232 @@
+//PERFECT NUMBER-----------
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        
+        if (sum == num) {
+            System.out.println(num + " is a Perfect Number.");
+        } else {
+            System.out.println(num + " is not a Perfect Number.");
+        }
+
+        sc.close();
+    }
+}
+//-----------------------------------------------------------------------
+
+//STRONG NUMBER---------
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+
+            // Find factorial of the digit
+            int fact = 1;
+            for (int i = 1; i <= digit; i++) {
+                fact *= i;
+            }
+
+            sum += fact;
+            num /= 10;
+        }
+
+        if (sum == original) {
+            System.out.println(original + " is a Strong Number.");
+        } else {
+            System.out.println(original + " is not a Strong Number.");
+        }
+
+        sc.close();
+    }
+}
+//-------------------------------------------------------------------------------------------------
+
+//PRIME NUMBER ONLY 2 FACTOR-----
+import java.util.Scanner;
+
+public class PrimeNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+
+        if (count == 2) {
+            System.out.println(num + " is a Prime Number.");
+        } else {
+            System.out.println(num + " is not a Prime Number.");
+        }
+
+        sc.close();
+    }
+}
+//-------------------------------------------------------------------------------------
+
+//ARMSTRONG NUMBER-----------
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int original = num;
+        int digits = String.valueOf(num).length();
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += Math.pow(digit, digits);
+            num /= 10;
+        }
+
+        if (sum == original) {
+            System.out.println(original + " is an Armstrong number.");
+        } else {
+            System.out.println(original + " is not an Armstrong number.");
+        }
+
+        sc.close();
+    }
+}
+//---------------------------------------------------------------------------------------------------------------
+
+//ADAM NUMBER----------------
+
+import java.util.*;
+
+public class Main {
+
+    public static int reverse(int num) {
+        int rev = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            rev = rev * 10 + digit;
+            num = num / 10;
+        }
+        return rev;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int revNum = reverse(num);
+
+        int square1 = num * num;
+        int square2 = revNum * revNum;
+
+        if (reverse(square1) == square2) {
+            System.out.println(num + " is an Adam Number");
+        } else {
+            System.out.println(num + " is not an Adam Number");
+        }
+
+        sc.close();
+    }
+}
+//--------------------------------------------------------------------------------
+
+//AMICABLE PAIR------------------
+import java.util.*;
+
+public class Main {
+
+    public static int sumOfDivisors(int num) {
+        int sum = 0;
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (sumOfDivisors(a) == b && sumOfDivisors(b) == a) {
+            System.out.println("Amicable Pair");
+        } else {
+            System.out.println("Not an Amicable Pair");
+        }
+
+        sc.close();
+    }
+}
+//----------------------------------------------------------------------------------------------
+
+//PRIME NUMBER-----------
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+
+        if (count == 2) {
+            System.out.println(num + " is a Prime Number");
+        } else {
+            System.out.println(num + " is not a Prime Number");
+        }
+
+        sc.close();
+    }
+}
