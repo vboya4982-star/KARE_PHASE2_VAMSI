@@ -1,0 +1,135 @@
+//-----SINGLE INHERITANCE-----
+class Parent {
+    void show() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Child");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.show();
+        c.display();
+    }
+}
+//-----------------------------------------------------------------------------
+
+//---MULTIPLE INHERTANCE-----
+interface A {
+    void showA();
+}
+
+interface B {
+    void showB();
+}
+
+class C implements A, B {
+    public void showA() {
+        System.out.println("A");
+    }
+
+    public void showB() {
+        System.out.println("B");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.showA();
+        c.showB();
+    }
+}
+//----------------------------------------------------------------------------------
+
+//----MILTILEVEL INHERTIANCE------------
+  class A {
+    void showA() {
+        System.out.println("A");
+    }
+}
+
+class B extends A {
+    void showB() {
+        System.out.println("B");
+    }
+}
+
+class C extends B {
+    void showC() {
+        System.out.println("C");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.showA();
+        c.showB();
+        c.showC();
+    }
+}
+//------------------------------------------------------------------
+
+//----HIERACHICAL INHERTIANCE-----
+  class Parent {
+    void show() {
+        System.out.println("Parent");
+    }
+}
+
+class Child1 extends Parent {
+    void display1() {
+        System.out.println("Child 1");
+    }
+}
+
+class Child2 extends Parent {
+    void display2() {
+        System.out.println("Child 2");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Child1 c1 = new Child1();
+        c1.show();
+        c1.display1();
+
+        Child2 c2 = new Child2();
+        c2.show();
+        c2.display2();
+    }
+}
+//------------------------------------------------------------------------
+
+//---HYBRID INHERITANCE----------
+  class A {
+    void show() {
+        System.out.println("A");
+    }
+}
+
+interface B {
+    void display();
+}
+
+class C extends A implements B {
+    public void display() {
+        System.out.println("B");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        C c = new C();
+        c.show();
+        c.display();
+    }
+}
