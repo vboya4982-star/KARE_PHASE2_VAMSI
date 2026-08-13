@@ -1,0 +1,130 @@
+//----TO CHECK THE NUMBER POWER OR NOT BY USING FUNCTION Ith ARGUMENT NO RETURN TYPE-------
+class Main {
+
+    static void checkPower(int n) {
+        int temp = n;
+
+        while (temp > 1 && temp % 2 == 0) {
+            temp = temp / 2;
+        }
+
+        if (temp == 1)
+            System.out.println(n + " is a power of 2");
+        else
+            System.out.println(n + " is not a power of 2");
+    }
+
+    public static void main(String[] args) {
+        checkPower(16);
+    }
+}
+//--------------------------------------------------------------------------------------------
+
+//----To Find The Nth Term------
+import java.util.*;
+class Main 
+{
+    static int fib(int n)//3
+    {
+        if(n<=1)//1
+        return n;//1
+        return fib(n-1)+fib(n-2);
+    }
+    public static void main(String[] args) {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        int ans = fib(n);//fib(3)
+        System.out.println(ans);
+    }
+}
+//-------------------------------------------------------------------------------------------
+
+//----LINEAR RECURSION------
+class Main {
+
+    static int sum(int n) {
+        if (n == 0) {
+            return 0;
+        }
+
+        return n + sum(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int n = 5;
+
+        System.out.println("Sum = " + sum(n));
+    }
+}
+//-----------------------------------------------------------------------------------------------
+
+//----FACTORIAL-------
+class Main {
+
+    static int fact(int n) {
+        if (n == 0)
+            return 1;
+
+        return n * fact(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fact(5));
+    }
+}
+//--------------------------------------------------------------------------------------------------
+
+//-----COPY CONSTRUCTER------
+class Student {
+    int id;
+    String name;
+
+    // Parameterized constructor
+    Student(int i, String n) {
+        id = i;
+        name = n;
+    }
+
+    // Copy constructor
+    Student(Student s) {
+        id = s.id;
+        name = s.name;
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student(101, "Vamsi");
+        Student s2 = new Student(s1);
+
+        s1.display();
+        s2.display();
+    }
+}
+//----------------------------------------------------------------------------------------
+
+//----NESTED CONSTRUCTER------
+class Outer {
+
+    class Inner {
+        int x;
+
+        Inner(int x) {
+            this.x = x;
+        }
+
+        void display() {
+            System.out.println("x = " + x);
+        }
+    }
+
+    public static void main(String[] args) {
+        Outer obj = new Outer();
+
+        Outer.Inner in = obj.new Inner(10);
+
+        in.display();
+    }
+}
