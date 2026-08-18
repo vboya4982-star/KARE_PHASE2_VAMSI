@@ -1,0 +1,186 @@
+// write a java program to find nth term of fibinocci series by using recursion
+6
+8
+
+
+import java.util.*;
+public class Main
+{
+    static int fib(int n){
+        if(n<=1)
+            return n;
+            return fib(n-1)+fib(n-2);
+    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int ans=fib(n);
+		System.out.println(ans);
+	}
+}
+
+
+//NO argument Constructor
+import java.util.*;
+public class Main {
+        Main(){
+            System.out.println("Main is started");
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+// argument Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(){
+            System.out.println(name+" "+rn);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+
+
+
+//output
+2 ABC
+
+import java.util.*;
+class Student{
+    int rollno;
+    String name;
+    Student(int r,String n){
+        this.rollno=r;
+        this.name=n;
+    }
+    Student (Student obj){
+        obj.rollno=2;
+    }
+    void display(){
+        System.out.println(rollno+" "+name);
+    }
+    public static void main(String args[]){
+        Student po=new Student(1,"ABC");
+        Student ps =new Student(po);
+        po.display();
+    }
+}
+
+//output
+10 20  30
+30
+60
+
+import java.util.*;
+class Main{
+    void add(int a,int b){
+        System.out.println(a+b);
+    }
+    void add(int a,int b,int c){
+        System.out.println(a+b+c);
+    }
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        int b=obj.nextInt();
+        int c=obj.nextInt();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(a,b,c);
+        
+    } 
+}
+
+//output
+20 6.66 v
+20 6.66
+6.66 v
+
+import java.util.*;
+class Main{
+    void add(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void add(float b,char c){
+        System.out.println(b+" "+c);
+    }
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        char c=obj.next().charAt(0);
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,c);
+        
+    } 
+}
+
+
+//output
+30 6.666
+30 6.666
+6.666 30
+
+import java.util.*;
+class Main{
+    void add(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void add(float b,int a){
+        System.out.println(b+" "+a);
+    }
+    
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,a);
+        
+    } 
+}
+
+
+//output
+4 6.66 v 3.3333
+4 6.66
+4 6.66
+v 3.3333
+3.3333 v
+
+import java.util.*;
+class Main{
+    void add(int a,float b){
+        System.out.println(a+" "+b);
+    }
+    void add(float a,int b){
+        System.out.println(b+" "+a);
+    }
+    void print(char c, double d){
+        System.out.println(c+" "+d);
+    }
+    void print(double c,char d){
+        System.out.println(c+" "+d);
+    }
+    
+    public static void main(String args[]){
+        Scanner obj=new Scanner(System.in);
+        int a=obj.nextInt();
+        float b=obj.nextFloat();
+        char c=obj.next().charAt(0);
+        double d=obj.nextDouble();
+        Main m=new Main();
+        m.add(a,b);
+        m.add(b,a);
+        m.print(c,d);
+        m.print(d,c);
+        
+    } 
+}
