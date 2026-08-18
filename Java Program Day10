@@ -1,0 +1,328 @@
+//write a java to create and display a 2D array
+Enter no of rows : 
+2
+Enter no of rows : 
+2
+Enter elements of Array : 
+1 2 3 4
+Elements in the Array : 
+1 2 
+3 4 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no of rows : ");
+        int row = sc.nextInt();
+        System.out.println("Enter no of rows : ");
+        int col = sc.nextInt();
+        int arr[][]=new int[row][col];
+        System.out.println("Enter elements of Array : ");
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("Elements in the Array : ");
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+              System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+//Write a java program to get sum of array elements
+Enter no of rows : 
+2
+Enter no of rows : 
+3
+Enter elements of Array : 
+10 20 30 40 50 60
+Elements in the Array : 
+10 20 30 
+40 50 60 
+Sum of Elements in Array : 210
+
+//write a java to create and display a 2D array
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no of rows : ");
+        int row = sc.nextInt();
+        System.out.println("Enter no of rows : ");
+        int col = sc.nextInt();
+        int arr[][]=new int[row][col];
+        int sum=0;
+        System.out.println("Enter elements of Array : ");
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("Elements in the Array : ");
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+              System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+              sum=sum+arr[i][j];
+            }  
+        }
+        System.out.println("Sum of Elements in Array : "+sum); 
+    }
+}
+
+//write the java programe to print diagonal elements in 2d array
+3
+Enter array elements
+1 2 3 4 5 6 7 8 9
+1 3  
+5 5  
+7 9
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        
+        int [][] arr=new int[row][row];
+        System.out.println("Enter array elements");
+        
+        for (int i =0;i<row;i++){
+            for(int j=0;j<row;j++){
+                arr[i][j]=sc.nextInt();
+
+            }
+        }
+        int sum=0;
+        for (int i =0;i<row;i++){
+            for(int j=0;j<row;j++){
+                if(i==j){
+                    System.out.print(arr[i][i]+" ");
+                }
+                if(i+j==row-1)
+                    System.out.print(arr[i][j]+" ");
+
+            }System.out.println(" ");
+        }
+           
+    }
+}
+
+//write the java programe to print transpose elements in Matrix in 2d array
+2
+3
+Enter array elements
+2 3 4 5 6 7
+
+
+
+Transposed Matrix : 
+2 5 
+3 6 
+4 7 
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        int [][] arr=new int[row][col];
+        int trans[][]=new int[col][row];
+        System.out.println("Enter array elements");
+        
+        for (int i =0;i<row;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for (int i =0;i<col;i++){
+            for(int j=0;j<row;j++){
+                trans[i][j]=arr[j][i];
+            }
+            System.out.println();
+        }
+        System.out.println("Transposed Matrix : ");
+        for (int i =0;i<col;i++){
+            for(int j=0;j<row;j++){
+                System.out.print(trans[i][j]+" ");
+            }
+            System.out.println();
+        }   
+    }
+}
+
+
+//write the java programe to print length of string without using inbuilt function/method
+venkatesh
+9
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        int c=0;
+        for(char ch:s.toCharArray())
+            c++;
+        System.out.print(c);        
+    }
+}
+
+
+//write the java programe to print number of words in given string
+venky loves playing chess
+4
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        int c=0; //c=1;
+        for(char ch:s.toCharArray())
+            if(ch==' ')
+            c++;
+        System.out.print(c+1);  // c      
+    }
+}
+
+
+//write the java programe to find the vowels count in the given string
+vamsi is studying java programming
+11
+27
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        int v=0,c=0;
+        s.toLowerCase();
+        for(char ch:s.toCharArray()){
+            if(ch =='a' || ch=='e' ||ch == 'i'|| ch== 'o'|| ch== 'u' )
+                v++;
+            else
+                c++;
+        }
+        System.out.println(v); 
+        System.out.println(c);
+    }
+}
+
+//write the java programe to find the vowels count in the given string
+ismav
+vamsi
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.nextLine();
+        char ch[] =str.toCharArray();
+        int s=0;
+        int e=ch.length-1;
+        while(s<e){
+            char temp = ch[s];
+            ch[s] = ch[e];
+            ch[e]=temp;
+            s++;
+            e--;
+        }
+        System.out.println(new String(ch));
+    }
+}
+
+//OUTPUT
+APPLE
+Unique count elements : 3
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        int arr[] =new int[256];
+        int c=0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i=0;i<256;i++){
+            if(arr[i] == 1)
+                c++;
+        }
+        System.out.println("Unique count elements : "+c);
+
+        }
+    }
+
+AAPPLE
+Repeated element : A
+Repeated element : P
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        int arr[] =new int[256];
+        int c=0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i=0;i<256;i++){
+            if(arr[i] == 2)
+                System.out.println("Repeated element : "+(char)i);
+
+        }
+        
+        }
+    }
+
+apple
+Repeated element : 1 a
+Repeated element : 1 e
+Repeated element : 1 l
+Repeated element : 2 p
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        int arr[] =new int[256];
+        int c=0;
+        for(char ch:s.toCharArray()){
+            arr[ch]++;
+        }
+        for(int i=0;i<256;i++){
+            if(arr[i]  >0)
+                System.out.println("Repeated element : "+ arr[i]+" " +(char)i);
+
+        }
+        
+        }
+    }
